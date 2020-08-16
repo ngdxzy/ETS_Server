@@ -6,7 +6,7 @@ from math import *
 import numpy as np
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-
+import os
 
 class Draw_Server():
     RoughEN = False
@@ -119,6 +119,7 @@ class Draw_Server():
                 #self.FIG.savefig(Name +'.png')
                 if self.enShot:
                     np.savetxt(Name + '_S.txt',self.Data_Center.DSP.get_shot())
+                    os.system('scp ' + Name + '_S.txt' + ' alfred@192.168.0.185:/home/alfred/experiment_data/VNA/')
                 self.Data_Center.DSP.Save_All(Name)
             except:
                 return False

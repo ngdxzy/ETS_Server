@@ -1,5 +1,5 @@
 import numpy as np
-
+import os
 
 class DSP:
     def __init__(self,data_checker,Invert,Thres):
@@ -52,7 +52,7 @@ class DSP:
 
     def Save_All(self, Name):
         np.savetxt(Name + '.txt', self.current_data);
-
+        os.system('scp ' + Name + '.txt' + ' alfred@192.168.0.185:/home/alfred/experiment_data/VNA/')
 
     def Check_Confidence(self,Last,Current):
         if not self.data_checker.get():

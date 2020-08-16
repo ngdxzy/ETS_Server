@@ -135,7 +135,7 @@ def loop(d_aver_l,d_aver_h,IP,port,dpi=100,size=(6.4,4.8),d_length=448):  # GUI
     FileName_L.grid(column=0, row=2, padx = 2, pady = 2)
     FileName_D = tk.Entry(Conf_Frame, show=None, width=32, bg=color_btn, fg=color_text, exportselection=0,justify='left')
     FileName_D.grid(column=1, row=2, padx = 2, pady = 2)
-    FileName_D.insert(0, './data/VNA/test')
+    FileName_D.insert(0, './data_linux/test')
 
     Save_B = tk.Button(Conf_Frame, width=16, text='Save', fg=color_text, bg=color_up, relief='ridge')
     Save_B.grid(column=2, row=2, padx = 2, pady = 2)
